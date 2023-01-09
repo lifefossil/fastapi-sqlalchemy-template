@@ -1,20 +1,22 @@
 [tool.poetry]
-name = "fastapi-sqlalchemy-template"
+name = "template-fastapi-sqlalchemy"
 version = "0.1.0"
 description = ""
 authors = ["oliver <lifefossil@outlook.com>"]
 readme = "README.md"
 packages = [{include = "src"}]
 
-# 填写如下代码后, 可以在项目根目录下通过命令行输入`poetry run dev` 就会运行src目录下main.py文件中start函数.
 [tool.poetry.scripts]
 dev = "src.main:start"
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
-fastapi = "^0.88.0"
+python = "^3.11"
+fastapi = "^0.89.0"
 uvicorn = {extras = ["standard"], version = "^0.20.0"}
+sqlalchemy = {extras = ["asyncmy"], version = "^1.4.46"}
+aioredis = "^2.0.1"
+itsdangerous = "^2.1.2"
 
 
 [build-system]
